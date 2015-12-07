@@ -1,0 +1,74 @@
+[user]
+  name = George Litos
+  email = GeorgeLitos@gmail.com
+
+[core]
+  editor = nano
+  autocrlf = input
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+
+  # Make `git rebase` safer on OS X
+  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+
+  # Prevent showing files whose names contain non-ASCII symbols as unversioned.
+  # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+  precomposeunicode = false
+
+[color]
+  ui = auto
+
+[help]
+  # Automatically correct and execute mistyped commands
+  autocorrect = 1
+
+[difftool]
+  prompt = false
+
+[diff "bin"]
+textconv = hexdump -v -C
+
+[push]
+  default = current
+  #default = matching
+
+[alias]
+  1 = clone --depth=1
+  addrem = !git addremove
+  addremove = !git add . && git add -u
+  amend = commit --amend --reuse-message=HEAD
+  br = branch
+  branches = branch -a
+  c = clone --recursive
+  ca = !git add -A && git commit -av
+  contributors = shortlog --summary --numbered
+  ci = commit
+  cm = commit -m
+  co = checkout
+  currentbranch = !git branch --contains HEAD | grep '*' | tr -s ' ' | cut -d ' ' -f2
+  d = diff
+  di = diff --cached
+  dt = difftool
+  fo = fetch origin
+  fu = fetch upstream
+  id = rev-parse
+  l   = log -16 --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  ldiff = difftool -t latex
+  lg  = log -10 --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lgl = log     --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ll  = log     --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  mo = !git merge --no-ff origin/`git currentbranch`
+  mu = !git merge --no-ff upstream/`git currentbranch`
+  po = push origin
+  pull = pull --ff-only
+  remotes = remote -v
+  st = status
+  s = status -s
+  tags = tag -l
+  uns = reset HEAD
+  unstage = reset HEAD
+  uo = !git merge --ff-only origin/`git currentbranch`
+  up = merge --ff-only
+  uu = !git merge --ff-only upstream/`git currentbranch`
+  wdiff = diff --color-words
