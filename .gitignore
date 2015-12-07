@@ -1,0 +1,56 @@
+# dotfiles specific
+locals.zsh
+local/
+
+# leak protection
+.ssh/
+.npmrc
+config.json
+.gitconfig
+*.log
+
+# Compiled Python files, linux, kde
+*.pyc
+/tmp
+*.swp
+*.lock
+*~
+.directory
+
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# Thumbnail, cache, shortcuts
+._*
+Thumbs.db
+ehthumbs.db
+*.lnk
+
+# Files that might appear on external disks
+# or volume root, trash
+.Spotlight-V100
+.Trashes
+$RECYCLE.BIN/
+.fseventsd
+.Trash-*
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Folders to ignore
+.hg
+.svn
+
+# Node.js package manager
+/bower_components
+/node_modules
+/npm-debug.log
+config.gypi
