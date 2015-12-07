@@ -27,6 +27,22 @@ tmp| will be removed
 keep only README, LICENSE and .gitignore on root folder
 ?maybe install/uninstall too?
 
+## shell specific
+
+
+## platform specific
+| file | platform | function |
+|:-----|:---------|:---------|
+aliases.osx|osx|mac
+alias.linux|linux|
+
+
+### local files
+| file | function | config | 
+|:-----|:---------|:-------|
+~/.gitconfig.local| git configuration | gitconfig
+
+
 ## Thanks to
 
 * [GitHub ❤ ~/](https://dotfiles.github.io/)
