@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # dotfiles uninstall script
 

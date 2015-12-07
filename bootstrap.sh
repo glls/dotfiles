@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # dotfiles installation script
 #
@@ -8,11 +8,11 @@
 DOTDIR=$HOME/dotfiles_test
 
 if [ -d $DOTDIR ]; then
-    echo "glls/dotfiles seem to be installed already."
+    echo "dotfiles seem to be already installed"
     exit 1;
 fi
 
-# Get it
+# Get it // put your repo here
 git clone https://github.com/glls/dotfiles.git $DOTDIR
 cd $DOTDIR
 
@@ -20,7 +20,7 @@ backEm() {
   # backup files that will be overwritten
 }
 
-copyEm() {
+copEm() {
   #rsync files
 }
 

@@ -27,6 +27,7 @@ add git prompt bash/zsh
 mac keyboard hacks
 
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) [ubuntu]
+# /etc/environment or /etc/profile
 
 application installation scripts
 
@@ -37,3 +38,16 @@ cheatsheet / README / links info
 * https://github.com/holman/dotfiles
 * http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/
 * https://github.com/jonathansick/dotfiles
+
+echo $SHELL
+echo $0
+
+# Check for super user
+if [ $UID -ne 0 ]; then
+echo Non root user. Please run as root.
+else
+echo "Root user"
+fi
+
+https://www.packtpub.com/packtlib/book/All%20Books/9781849513760/1/ch01lvl1sec22/Comparisons%20and%20tests
+
