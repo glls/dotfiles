@@ -1,0 +1,2 @@
+# move to machine specific?
+mongod --dbpath /Volumes/Data/mongoDB

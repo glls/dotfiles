@@ -10,6 +10,12 @@ dotfiles from scratch
 
 ## Installation
 
+add
+platform/package manager specific installations
+pacman|yaourt, apt-get
+brew
+choco
+
 
 ## Uninstall
 

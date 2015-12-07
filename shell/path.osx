@@ -1,0 +1,4 @@
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:/usr/local/mysql/bin"
+export PATH="$PATH:/Applications/DevDesktop/drush"
+export PATH="/usr/local/sbin:$PATH"

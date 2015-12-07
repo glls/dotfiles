@@ -2,6 +2,14 @@
 # osx specific aliases
 #######################################
 
+alias iplocal="ipconfig getifaddr en0"
+
+alias composer='php /usr/local/bin/composer.phar'
+alias phpunit='php /usr/local/bin/phpunit.phar'
+
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
 # Add iTerm as a background process
 alias addiTerm="/usr/libexec/PlistBuddy -c 'Add :LSUIElement bool true' /Applications/iTerm.app/Contents/Info.plist"
 

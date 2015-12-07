@@ -1,5 +1,4 @@
 # dotfiles specific
-locals.zsh
 local/
 
 # leak protection
@@ -9,14 +8,14 @@ config.json
 .gitconfig
 *.log
 
-# Compiled Python files, linux, kde
+# Compiled files, linux, kde
 *.pyc
+*.out
 /tmp
 *.swp
 *.lock
 *~
 .directory
-
 
 # Folder view configuration files
 .DS_Store

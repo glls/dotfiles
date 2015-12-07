@@ -16,17 +16,23 @@ backup replaced files
 
 support zsh and bash (and windows?)
 
+add local/ dir ?
+
 check for running OS
 
 split linux/mac/windows specific files
 
+add git prompt bash/zsh
 
+mac keyboard hacks
+
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) [ubuntu]
 
 application installation scripts
 
 cheatsheet / README / links info
 
-* check in okeanos VMs, local, iMac
+* check in okeanos VMs, iMac
 * https://github.com/thanpolas/Practice
 * https://github.com/holman/dotfiles
 * http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/

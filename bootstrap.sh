@@ -34,12 +34,13 @@ main() {
   printf "hello world\n"
 
   # if $TERM == zsh source $HOME/.zprofile
-  #
+  # 
   # elseif $TERM == /bin/bash  source $HOME/.bash_profile
   #
+  # first source exports then path
 
-  # if $OSTYPE linux-gnu
-  #
+  # if $OSTYPE == linux-gnu
+  # else if $OSTYPE == darwin15
 }
 
 main
