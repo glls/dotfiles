@@ -1,3 +1,5 @@
+*under heavy development*
+
 # GL's dotfiles
 dotfiles from scratch
 
@@ -13,7 +15,7 @@ dotfiles from scratch
 
 ## Folder structure
 |directory|function|
-|---------|:------:|
+|:--------|:-------|
 backup|used for backup of replaced files during installation
 bash| bash specific files
 bin| commands
