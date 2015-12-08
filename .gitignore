@@ -1,6 +1,3 @@
-# dotfiles specific
-local/
-
 # leak protection
 .ssh/
 .npmrc

@@ -1,0 +1,22 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+PS1='[\u@\h \W]\$ '
+
+export VISUAL="nano"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+#. {repository_root}/powerline/bindings/bash/powerline.sh
+source /usr/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+source $HOME/.bash_prompt
+
+archey
+fortune -s

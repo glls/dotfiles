@@ -44,7 +44,7 @@ alias.linux|linux|
 
 
 ### local files
-| file | function | config | 
+| file | function | config |
 |:-----|:---------|:-------|
 ~/.gitconfig.local| git configuration | gitconfig
 
