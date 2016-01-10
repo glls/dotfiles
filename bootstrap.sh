@@ -6,16 +6,26 @@
 # curl -L https://raw.github.com/glls/dotfiles/master/bootstrap.sh | bash
 
 #############################
-# Config                    #
-#############################
+# Configuration
+#
 
 # dotfiles repository
 DOTREPO=https://github.com/glls/dotfiles.git
 # dotfiles install directory
 DOTDIR=$HOME/dotfiles_test
 
-#############################
-# Do not edit               #
+# get distribution, version, architecture
+# with lsb_release, /etc/issue, uname, $OSTYPE
+DOT
+
+# choose bash or zsh from command line, default bash
+DOTSHELL=bash
+
+# get machine name
+DOTMACHINE=GL1@home
+
+#
+# End of Configuration
 #############################
 
 function check() {
@@ -51,13 +61,20 @@ function linkEm() {
 }
 
 function runEm() {
-  # run/source filesm according to current shell
+  # run/source files according to current shell
   for file in $DOTDIR/.{path,bash_prompt,export,alias,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
   done;
   unset file;
 }
 
+function installEm() {
+  # run installation scripts from install
+}
+
+function updateEm() {
+  # run update scripts from installdir
+}
 function info() {
   printf "Running dotfiles bootstrap...\n"
   printf "OS:\t$OSTYPE\n"

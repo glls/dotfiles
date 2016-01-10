@@ -7,46 +7,40 @@ dotfiles from scratch
 
 ## Features
 
-
 ## Installation
-
-add
-platform/package manager specific installations
-pacman|yaourt, apt-get
-brew
-choco
-
+run bootstrap.sh
 
 ## Uninstall
+run debootstrap.sh to remove .dotfiles directory and restore old files
 
 ## Folder structure
 |directory|function|
 |:--------|:-------|
-backup|used for backup of replaced files during installation
-bash| bash specific files
-bin| commands
-shell | files for all supported  shels
-zsh| zsh specific files
-tmp| will be removed
-
+|backup|used for backup of replaced files during installation
+|bash| bash specific files
+|bin| commands
+|shell | files for all supported shells
+|zsh| zsh specific files
+|tmp| will be removed
+|install| installation and update scripts
 
 keep only README, LICENSE and .gitignore on root folder
-?maybe install/uninstall too?
+<br>?maybe install/uninstall too?
 
 ## shell specific
-
+choose bash/zsh from command line option, default bash
 
 ## platform specific
 | file | platform | function |
 |:-----|:---------|:---------|
-aliases.osx|osx|mac
-alias.linux|linux|
+|alias.osx|osx|mac aliases
+|alias.linux|linux|linux aliases
 
 
 ### local files
 | file | function | config |
 |:-----|:---------|:-------|
-~/.gitconfig.local| git configuration | gitconfig
+|~/.gitconfig.local| git configuration | gitconfig
 
 
 ## Thanks to
