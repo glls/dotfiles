@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # dotfiles installation script
 #
 # get started :
@@ -37,7 +37,7 @@ white="\e[1;37m";
 #
 # copy a file if it exists
 #
-function copy_file() {
+function copy_file {
   if [ -f "$1" ]; then
     printf "${green}$1 copied\n"
     cp "$1" "$2"
@@ -49,7 +49,7 @@ function copy_file() {
 #
 # backup files to directory in $DOTDIR/backup/ per machine and datetime
 #
-function backup_files() {
+function backup_files {
   # backup files that will be overwritten
   NOW=$(date +"%y%m%d.%H%M%S")
   backup_dir=$DOTDIR/backup/$DOTMACHINE.$NOW/
@@ -66,7 +66,7 @@ function backup_files() {
 #
 #
 #
-function copyEm() {
+function copyEm {
   #rsync files
   rsync
 }
@@ -74,7 +74,7 @@ function copyEm() {
 #
 # link dotfiles that need to be in $HOME
 #
-function linkEm() {
+function linkEm {
   # bash
   ln -Ffs $DOTDIR/bash/bash_profile $HOME/.bash_profile
   ln -Ffs $DOTDIR/bash/bashrc $HOME/.bashrc
@@ -91,7 +91,7 @@ function linkEm() {
 #
 #
 #
-function runEm() {
+function runEm {
   # if $TERM == zsh source $HOME/.zprofile
   #
   # elseif $TERM == /bin/bash  source $HOME/.bash_profile
@@ -106,7 +106,7 @@ function runEm() {
 #
 # print configuration
 #
-function print_info() {
+function print_info {
   printf "${white}Running dotfiles bootstrap...${reset}\n"
   printf "Will install dotfiles in ${white}$DOTDIR${reset} from ${white}$DOTREPO${reset}\n\n"
 }
@@ -114,7 +114,7 @@ function print_info() {
 #
 # main bootstrap function
 #
-function main_bootstrap() {
+function main_bootstrap {
 
   print_info
 
