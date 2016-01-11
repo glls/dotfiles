@@ -1,13 +1,12 @@
 #!/bin/sh
-
 # dotfiles installation script
 #
 # get started :
 # curl -L https://raw.github.com/glls/dotfiles/master/bootstrap.sh | bash
-
-#DEBUG
+#
+# DEBUG
 #set -x
-
+#
 #############################
 # Configuration
 #
@@ -16,7 +15,9 @@ DOTREPO="https://github.com/glls/dotfiles.git"
 # dotfiles install directory
 DOTDIR="$HOME/dotfiles_test"
 # get distribution, version, architecture
-# with lsb_release, /etc/issue, uname, $OSTYPE, hostname
+# $OSTYPE
+# linux: lsb_release, /etc/issue, uname
+# osx: w_vers -productVersion
 DOTDISTRO="$OSTYPE Archlinux"
 #DOTDIST="linux-gnu Ubuntu 14.04"
 # choose bash, zsh from command line, default bash

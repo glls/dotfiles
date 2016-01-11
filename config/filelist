@@ -1,0 +1,4 @@
+#
+# OSTYPE filename destination
+#
+darwin15 DefaultKeyBinding.dict $HOME/Library/KeyBindings/

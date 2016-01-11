@@ -17,15 +17,13 @@ run debootstrap.sh to remove .dotfiles directory and restore old files
 |directory|function|
 |:--------|:-------|
 |backup|used for backup of replaced files during installation
-|bash| bash specific files
 |bin| commands
 |shell | files for all supported shells
-|zsh| zsh specific files
-|tmp| will be removed
+|config| various config files
 |install| installation and update scripts
+|tmp| will be removed
 
 keep only README, LICENSE and .gitignore on root folder
-<br>?maybe install/uninstall too?
 
 ## shell specific
 choose bash/zsh from command line option, default bash
