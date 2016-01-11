@@ -1,0 +1,8 @@
+.bash_profile
+.bashrc
+.bash_prompt
+.zshrc
+.gitconfig
+.gitignore
+.editorconfig
+moo_test_must_fail
