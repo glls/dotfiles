@@ -1,38 +1,45 @@
 #!/bin/bash
-# dotfiles installation script
+# GL's dotfiles installation script
 #
 # get started :
 # curl -L https://raw.github.com/glls/dotfiles/master/bootstrap.sh | bash
 #
-# DEBUG
-#set -x
+# enable DEBUG
+# set -x
 #
 #############################
 # Configuration
 #
 # dotfiles repository
 DOTREPO="https://github.com/glls/dotfiles.git"
-# dotfiles install directory
+# dotfiles install directory, could be "$HOME/.dotfiles"
 DOTDIR="$HOME/dotfiles_test"
-# get distribution, version, architecture
-# $OSTYPE
-# linux: lsb_release, /etc/issue, uname
-# osx: w_vers -productVersion
-DOTDISTRO="$OSTYPE Archlinux"
-#DOTDIST="linux-gnu Ubuntu 14.04"
-# choose bash, zsh from command line, default bash
+# install for shell {bash, zsh, all}
 DOTSHELL="bash"
-# get machine name
-DOTMACHINE="$(hostname)"
 #
 # End of Configuration
 #############################
 
+if [[ "$DOTSHELL" == "auto" ]]; then
+  DOTSHELL=$0
+fi
+# if shell not bash or zsh exit "Unsupported shell"
+
+# get machine name
+DOTMACHINE="$(hostname)"
+
+# get distribution, version, architecture
+# osx: w_vers -productVersion
+DOTDISTRO="$(lsb_release -si)"
+# if lsb_release found ^^
+# if $OSTYPE==darwin DOTDISTRO=`w_vers -productVersion`
+# elif $OSTYPE==linux-gnu DOTDISTRO=`cat /etc/issue`
+
 # init colors
 reset="\e[0m";
+bold="\e[1m";
 green="\e[1;32m";
 red="\e[1;31m";
-white="\e[1;37m";
 
 #
 # copy a file if it exists
@@ -53,7 +60,7 @@ function backup_files {
   # backup files that will be overwritten
   NOW=$(date +"%y%m%d.%H%M%S")
   backup_dir=$DOTDIR/backup/$DOTMACHINE.$NOW/
-  printf "Backing up files to $backup_dir\n"
+  printf "\nBacking up files to ${bold}$backup_dir${reset}\n"
   mkdir $backup_dir
   while read f; do
     copy_file $HOME/$f $backup_dir
@@ -64,17 +71,9 @@ function backup_files {
 }
 
 #
-#
-#
-function copyEm {
-  #rsync files
-  rsync
-}
-
-#
 # link dotfiles that need to be in $HOME
 #
-function linkEm {
+function link_files {
   # bash
   ln -Ffs $DOTDIR/bash/bash_profile $HOME/.bash_profile
   ln -Ffs $DOTDIR/bash/bashrc $HOME/.bashrc
@@ -86,12 +85,13 @@ function linkEm {
   ln -Ffs $DOTDIR/gitconfig $HOME/.gitignore
 
   ln -Ffs $DOTDIR/shell/editorconfig $HOME/.editorconfig
+  # $HOME/bin
 }
 
 #
+# evaluate and load script files
 #
-#
-function runEm {
+function source_files {
   # if $TERM == zsh source $HOME/.zprofile
   #
   # elseif $TERM == /bin/bash  source $HOME/.bash_profile
@@ -107,8 +107,9 @@ function runEm {
 # print configuration
 #
 function print_info {
-  printf "${white}Running dotfiles bootstrap...${reset}\n"
-  printf "Will install dotfiles in ${white}$DOTDIR${reset} from ${white}$DOTREPO${reset}\n\n"
+  printf "${bold}Running dotfiles bootstrap...${reset}\n"
+  printf "Installing on $DOTMACHINE ($DOTDISTRO) for $DOTSHELL\n"
+  printf "Will install dotfiles in ${bold}$DOTDIR${reset} from ${bold}$DOTREPO${reset}\n\n"
 }
 
 #
@@ -126,7 +127,6 @@ function main_bootstrap {
       return $ret
     fi
   else
-    # update from git
     printf "dotfiles seem to be already installed, updating\n"
     cd $DOTDIR
     git pull
@@ -142,6 +142,12 @@ function main_bootstrap {
     return $ret
   fi
 
+  #link_files
+
+  #copy files from ./config
+
+  #source_files
+
   printf "${green}DEBUG1${reset} END\n"
 
   return 0
@@ -151,7 +157,7 @@ main_bootstrap
 ret=$?
 
 # unset functions used in bootstrap
-unset -f copy_file backup_files print_info main_bootstrap
-unset -v DOTREPO DOTDIR DOTDISTRO DOTSHELL DOTMACHINE red green reset white
+unset -f copy_file backup_files link_files source_files print_info main_bootstrap
+unset -v DOTREPO DOTDIR DOTDISTRO DOTSHELL DOTMACHINE red green reset bold
 
 exit $ret
