@@ -1,4 +1,6 @@
 #
-# OSTYPE filename destination
+# $OSTYPE filename destination
 #
 darwin15 DefaultKeyBinding.dict $HOME/Library/KeyBindings/
+* editorconfig $HOME/.editorconfig
+* gitconfig $HOME/.gitconfig

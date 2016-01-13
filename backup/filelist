@@ -1,6 +1,7 @@
 .bash_profile
 .bashrc
 .bash_prompt
+.bash_aliases
 .zshrc
 .gitconfig
 .gitignore
