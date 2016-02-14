@@ -3,6 +3,7 @@
 .npmrc
 config.json
 .gitconfig
+backup/
 *.log
 
 # Compiled files, linux, kde
