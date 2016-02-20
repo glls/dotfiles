@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo systemctl start mongodb.service
+systemctl status  mongodb.service
