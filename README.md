@@ -1,11 +1,12 @@
-*under heavy development*
-
 # GL's dotfiles
 dotfiles from scratch
 
-[image placeholder]
+![GL](https://www.gravatar.com/avatar/5d1bf77dd8f1e428f8a77078cb6a608e)
 
 ## Features
+* create backup of replaced files
+* run os/arch/host specific scripts
+* upgrade via git
 
 ## Installation
 run bootstrap.sh
