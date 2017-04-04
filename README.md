@@ -5,7 +5,7 @@ dotfiles from scratch
 
 ## Features
 * create backup of replaced files
-* run os/arch/host specific scripts
+* os/arch/host specific scripts/configuration
 * upgrade via git
 
 ## Installation
