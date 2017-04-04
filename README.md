@@ -9,10 +9,11 @@ dotfiles from scratch
 * upgrade via git
 
 ## Installation
-run bootstrap.sh
+run 
+`bootstrap.sh`
 
 ## Uninstall
-run debootstrap.sh to remove .dotfiles directory and restore old files
+run `debootstrap.sh` to remove .dotfiles directory and restore from backup
 
 ## Folder structure
 |directory|function|
