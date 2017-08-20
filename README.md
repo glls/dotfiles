@@ -37,11 +37,16 @@ choose bash or zsh, default is bash
 |alias.linux|linux|linux aliases
 
 
-### Local files
+## Local files
 | file | function | config |
 |:-----|:---------|:-------|
 |~/.gitconfig.local| git configuration | gitconfig
 
+## Tested on 
+- [ ] Linux (Arch)
+- [x] Linux (Ubuntu)
+- [x] macOS
+- [x] Bash on Ubuntu on Windows
 
 ## Thanks to
 
