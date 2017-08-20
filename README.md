@@ -27,17 +27,17 @@ run `debootstrap.sh` to remove .dotfiles directory and restore files from backup
 
 keep only README, LICENSE and .gitignore on root folder
 
-## shell specific
-choose bash/zsh from command line option, default bash
+## Shell options
+choose bash or zsh, default is bash
 
-## platform specific
+## Platform options
 | file | platform | function |
 |:-----|:---------|:---------|
 |alias.osx|osx|mac aliases
 |alias.linux|linux|linux aliases
 
 
-### local files
+### Local files
 | file | function | config |
 |:-----|:---------|:-------|
 |~/.gitconfig.local| git configuration | gitconfig
