@@ -9,11 +9,10 @@ dotfiles from scratch
 * Upgrade via git
 
 ## Installation
-run 
-`bootstrap.sh`
+Run `bootstrap.sh`
 
 ## Uninstall
-run `debootstrap.sh` to remove .dotfiles directory and restore files from backup folder
+Run `debootstrap.sh` to remove .dotfiles directory and restore files from backup folder
 
 ## Folder structure
 |directory|function|
@@ -25,10 +24,10 @@ run `debootstrap.sh` to remove .dotfiles directory and restore files from backup
 |install| installation and update scripts
 |tmp| will be removed
 
-keep only README, LICENSE and .gitignore on root folder
+Keep only README, LICENSE and .gitignore on root folder
 
 ## Shell options
-choose bash or zsh, default is bash
+Choose bash or zsh, default is bash
 
 ## Platform options
 | file | platform | function |
