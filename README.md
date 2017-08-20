@@ -4,16 +4,16 @@ dotfiles from scratch
 ![GL](https://www.gravatar.com/avatar/5d1bf77dd8f1e428f8a77078cb6a608e)
 
 ## Features
-* create backup of replaced files
-* os/arch/host specific scripts/configuration
-* upgrade via git
+* Create (local) backup of replaced files
+* OS/Arch/Host specific scripts/configuration
+* Upgrade via git
 
 ## Installation
 run 
 `bootstrap.sh`
 
 ## Uninstall
-run `debootstrap.sh` to remove .dotfiles directory and restore from backup
+run `debootstrap.sh` to remove .dotfiles directory and restore files from backup folder
 
 ## Folder structure
 |directory|function|
