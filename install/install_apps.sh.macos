@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# System settings
+## Remove workspace auto-switching
+defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+##Enable repeating keys by pressing and holding down keys
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+killall Dock
+
+# Dev Tools
+xcode-select --install
+
+
+# brew
+brew update && \
+brew install \
+	bat \
+	wget \
+	tree \
+	ncdu \
+	git \
+	mc \
+	awscli \
+	p7zip
+
+brew tap caskroom/cask && \
+brew cask install \
+	slack \
+	1password \
+	sublime-text \
+	transmission \
+	vlc \
+	suspicious-package \
+	iterm2 \
+	firefox \
+	dropbox \
+	carbon-copy-cloner \
+	google-chrome
+
+brew tap caskroom/fonts && \
+brew cask install \
+	font-hack \
+	font-source-code-pro
+
+# git config
+# git config --global credential.helper osxkeychain
+
+# sublime config
+
+# get ip eth0
+# ipconfig getifaddr en0
+# get wireless ip
+# ipconfig getifaddr en1
