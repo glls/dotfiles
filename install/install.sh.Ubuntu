@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# update
+sudo apt-get update && \
+sudo apt-get install \
+	p7zip \
+	mc \
+	apg \
+	wget \
+	fortune-mod \
+	ncdu \
+	tree
+
+# cleanup
+sudo apt-get autoremove && sudo apt-get clean
