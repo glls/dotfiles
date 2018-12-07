@@ -2,16 +2,20 @@
 ---
 create a .gitignore, also include [credential filtering](https://github.com/ChALkeR/notes/blob/master/Do-not-underestimate-credentials-leaks.md)
 
+check device_ids from lsusb (if installed)
+
 _start the ssh-agent in the background_
 
 `eval "$(ssh-agent -s)"`
 
 ssh-add -l
 
-### installation [update & symlink to ~]
+# installation [update & symlink to ~]
+
 backup replaced files
 
-### uninstall
+
+## uninstall
 
 
 support zsh and bash (and windows?)
