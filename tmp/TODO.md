@@ -2,7 +2,9 @@
 ---
 create a .gitignore, also include [credential filtering](https://github.com/ChALkeR/notes/blob/master/Do-not-underestimate-credentials-leaks.md)
 
-check device_ids from lsusb (if installed)
+check device_ids from lsusb (if installed) | ioreg -p IOUSB -w0 
+
+/usr/local/etc/bash_completion.d
 
 _start the ssh-agent in the background_
 

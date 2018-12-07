@@ -2,4 +2,3 @@
 brew update && brew cleanup && brew outdated && brew upgrade
 
 softwareupdate -i -a 
-

@@ -35,6 +35,7 @@ brew cask install \
 	firefox \
 	dropbox \
 	carbon-copy-cloner \
+	copyq \
 	google-chrome
 
 brew tap caskroom/fonts && \
