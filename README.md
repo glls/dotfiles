@@ -42,10 +42,9 @@ Choose bash or zsh, default is bash
 |~/.gitconfig.local| git configuration | gitconfig
 
 ## Tested on 
-- [x] Linux (Arch)
-- [ ] Linux (Ubuntu)
+- [x] Linux (Arch/Ubuntu)
 - [ ] macOS
-- [ ] Bash on Ubuntu on Windows
+- [ ] WSL2
 
 ## Thanks to
 
